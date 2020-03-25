@@ -1,5 +1,6 @@
 import {html, render} from './node_modules/lit-html/lit-html.js';
 import {unsafeHTML} from './node_modules/lit-html/directives/unsafe-html.js';
+import Glide, { Autoplay } from './node_modules/@glidejs/glide/dist/glide.modular.esm.js'
 
 const content = {
 	'1': {
@@ -27,7 +28,29 @@ const detailTemplate = (content) => html`
 		</div>
 	`;
 const videoTemplate = (src) => html`<video autoplay="true" muted="muted" loop="true" class="fit-fill" src="${src}"></video>`;
+
+const carouselTemplate = (slides) => html`
+	<div class="slider-container">
+		<div class="glide">
+		  <div data-glide-el="track" class="glide__track">
+		    <ul class="glide__slides">
+		      ${slides.map((i) => html`<li class="glide__slide"><img src="${i}" /><div class="mie_bg" style="background-image:url('${i}')"></div></li>`)}
+		    </ul>
+		  </div>
+		</div>
+	</div>
+	`;
  
+async function getCarouselData() {
+	let response = await fetch('photos.json');
+	if (response.ok) { // если HTTP-статус в диапазоне 200-299
+	  // получаем тело ответа (см. про этот метод ниже)
+	  let json = await response.json();
+	  return json;
+	} else {
+	  console.log("Ошибка HTTP: " + response.status);
+	}
+} 
 
 let params = new URLSearchParams(window.location.search);
 console.log(params.get("detail"));
@@ -42,3 +65,18 @@ const video = params.get("video");
 if(video && typeof video !== 'undefined') {
 	render(videoTemplate(video), document.body);
 }
+const carousel = params.get("carousel");
+if(carousel && typeof carousel !== 'undefined') {
+	const images = getCarouselData();
+	images.then((val) => {
+		console.log(val);
+		render(carouselTemplate(val), document.body);
+		new Glide('.glide', {
+			type: 'carousel',
+			autoplay: 4000,
+			hoverpause: false
+		}).mount({ Autoplay });
+	});
+
+}
+
