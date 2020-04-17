@@ -2,13 +2,14 @@ import {html, render} from './node_modules/lit-html/lit-html.js';
 import {unsafeHTML} from './node_modules/lit-html/directives/unsafe-html.js';
 import Glide, { Autoplay } from './node_modules/@glidejs/glide/dist/glide.modular.esm.js'
 
+document.querySelector("html").style.zoom = Math.min(window.innerWidth / 1920, window.innerHeight / 1080);
 
 // Define a template
 const detailTemplate = (content) => html`
 		<div class="container detail-container">
 			<h1>${content.title}</h1>
 			<div class="row">
-				<div class="detail-image column"><img width="640px" src="${content.image}" /></div>
+				<div class="detail-image column"><img src="${content.image}" class="animated zoomIn" /></div>
 				<div class="detail-text column">
 					${unsafeHTML(content.text)}
 				</div>
