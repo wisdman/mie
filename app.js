@@ -2,7 +2,7 @@ import {html, render} from './node_modules/lit-html/lit-html.js';
 import {unsafeHTML} from './node_modules/lit-html/directives/unsafe-html.js';
 import Glide, { Autoplay } from './node_modules/@glidejs/glide/dist/glide.modular.esm.js'
 
-//document.querySelector("html").style.zoom = Math.min(window.innerWidth / 1920, window.innerHeight / 1080);
+document.querySelector("html").style.zoom = Math.min(window.innerWidth / 1920, window.innerHeight / 1080);
 
 // Define a template
 const detailTemplate = (content) => html`
@@ -192,6 +192,24 @@ const carouselTemplate = (slides) => html`
 		</div>
 	</div>
 	`;
+
+const indexList = (items) => html`
+	    <ol>
+	      ${items.map((item, index) => html`<li><a href="/detail.html?detail=${index + 1}">${unsafeHTML(item.title)}</li>`)}
+	    </ol>
+	`;	
+
+
+async function getIndex() {
+	let res  = getData('buildings.json');
+	res.then((content) => {
+		if(typeof content !== 'undefined') {
+			render(indexList(content), document.body);
+		}
+	});
+}
+
+getIndex();
  
 async function getData(url) {
 	let response = await fetch(url);
@@ -234,4 +252,3 @@ if(carousel && typeof carousel !== 'undefined') {
 	});
 
 }
-

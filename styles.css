@@ -301,3 +301,23 @@ strong,
 .detail-video-container img {
   width: 100%;
 }
+
+.detail-video-container {
+  overflow: hidden;
+}
+
+/********** Удалить *********/
+.index {
+  background-color: #b3ada3;
+  color: #fff;
+  margin: 100px;
+}
+
+.index a {
+  color: #fff;
+}
+
+.index li a {
+  display: inline-block;
+  padding: 10px 0;
+}
