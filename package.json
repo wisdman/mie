@@ -1,14 +1,16 @@
 {
   "name": "mie",
   "version": "1.0.0",
-  "description": "Проект интерактивного стенда для Музея Истории Екатеринбургв",
+  "description": "Проект интерактивного стенда для Музея Истории Екатеринбурга",
   "main": "index.js",
   "scripts": {
-    "test": "run"
+    "test": "run",
+    "start": "ws"
   },
   "author": "YF",
   "license": "ISC",
   "dependencies": {
+    "local-web-server": "^4.0.0",
     "@glidejs/glide": "^3.4.1",
     "lit-html": "^1.2.1",
     "milligram": "^1.3.0"
