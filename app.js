@@ -164,6 +164,20 @@ const detailTemplates = [
 				${unsafeHTML(content.text)}
 			</div>
 		</div>
+	`,
+// 11
+(content) => html`
+		<div class="container detail-container golden-grid">
+			<h1 style="grid-area: 4 / 4 / span 2 / span 10;">${content.title}</h1>
+			<h3 style="grid-area: 6 / 4 / span 1 / span 10; align-self: end;" class="subtitle">${content.subtitle}</h3>
+			<div class="detail-video-container" style="grid-area: 6 / 1 / span 20 / span 20;">
+				
+				<video src="${content.image}" type="video/mp4" autoplay muted loop style="margin-left: -400px;"></video>
+			</div>
+			<div class="row detail-text" style="grid-area: 8 / 13 / span 10 / span 5;">
+				${unsafeHTML(content.text)}
+			</div>
+		</div>
 	`,				
 ]	
 	const detailTemplate2 = (content) => html`
