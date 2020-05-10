@@ -1,0 +1,25 @@
+:host {
+	--x1: 0;
+	--y1: 0;
+	--x2: 0;
+	--y2: 0;
+	background-color: transparent;
+	border: 2px solid red;
+	box-sizing: content-box;
+	width: calc((var(--x2) - var(--x1)) * 1px);
+	height: calc((var(--y2) - var(--y1)) * 1px);
+	display: block;
+	position: absolute;
+	left: calc(var(--x1) * 1px);
+	top: calc(var(--y1) * 1px);
+}
+
+path {
+	stroke-width: 2px;
+	stroke: blue;
+	fill: transparent;
+}
+
+path.active {
+	stroke: red;
+}
