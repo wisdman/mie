@@ -1,0 +1,14 @@
+:host {
+	position: relative;
+	display: block;
+}
+
+path {
+	stroke-width: 2px;
+	stroke: blue;
+	fill: transparent;
+}
+
+path.active {
+	stroke: red;
+}
