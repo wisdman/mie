@@ -39,6 +39,3 @@ node_modules
 *.tmp
 *.bak
 ._*
-
-### Video ###
-video/plotina.mp4
