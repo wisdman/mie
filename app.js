@@ -223,7 +223,7 @@ async function getIndex() {
 	});
 }
 
-getIndex();
+//getIndex();
  
 async function getData(url) {
 	let response = await fetch(url);

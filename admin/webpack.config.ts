@@ -130,8 +130,8 @@ export default {
     }),
 
     new MiniCssExtractPlugin({
-      filename: "css/[name].[contenthash:10].css",
-      chunkFilename: "css/[name].[contenthash:10].css",
+      filename: "css/[name].css",
+      chunkFilename: "css/[name].css",
     }),
 
     new HtmlWebpackPlugin({

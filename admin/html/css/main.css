@@ -1,0 +1,52 @@
+.shutdown.icon {
+  color: #000;
+  position: absolute;
+  margin-top: 3px;
+  margin-left: 3px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  border: solid 1px currentColor;
+}
+.shutdown.icon:before {
+  content: '';
+  position: absolute;
+  left: 3px;
+  top: -2px;
+  width: 1px;
+  height: 8px;
+  border-left: solid 3px white;
+  border-right: solid 3px white;
+  background-color: currentColor;
+}
+
+.header {
+  padding: 2em 0;
+}
+
+.logo {
+  font-size: 36px;
+}
+
+.shutdown {
+  text-align: right;
+}
+
+.round {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  padding: 0;
+  text-align: center;
+  display: inline-flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.section {
+  padding: 20px 0;
+}
+
+.calendar--on {
+  min-height: 40px;
+}
