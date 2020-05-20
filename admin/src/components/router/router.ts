@@ -17,8 +17,8 @@ export class Router extends HTMLElement {
 			this.route(state)
 		})
 
-
-		//window.history.replaceState({route: ""}, "", "/")
+		const route = window.location.pathname
+		window.history.replaceState({route, id: ""}, "", route)
 	}
 
 	static route(state:IState) {
