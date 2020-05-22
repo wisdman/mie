@@ -12,3 +12,9 @@ path {
 path.active {
 	stroke: red;
 }
+
+polygon {
+	stroke-width: 2px;
+	stroke: blue;
+	fill: transparent;
+}

@@ -1,7 +1,7 @@
 import STYLES from "./point.css"
 import TEMPLATE from "./point.html"
 import {Point} from "../../libs/point"
-import {PROPERTY_CHANGE_EVENT, PropertyChangeEvent} from "../../libs/change_event"
+import {PROPERTY_CHANGE_EVENT, PropertyChangeEvent} from "../../libs/events"
 
 export class LitPoint extends HTMLElement {
 	static TAG_NAME = 'lit-point'
@@ -11,15 +11,22 @@ export class LitPoint extends HTMLElement {
 
 	private _root = this.attachShadow({mode: 'open'})
 
-	constructor(private _point:Point) {
+	constructor(private _point:Point, {dx = 0, dy = 0}:{dx?:number, dy?:number} = {}) {
         super()
         this._root.innerHTML = `<style>${STYLES}</style>${TEMPLATE}`
-        this.x = this._point.x
-        this.y = this._point.y
+        const [x,y] = this._point.screenCoords
+        this.x = x
+        this.y = y
+        this.dx = dx
+        this.dy = dy
         this._point.on(PROPERTY_CHANGE_EVENT, ({detail}: PropertyChangeEvent) => {
             const [name, value] = detail
             if (name === "active") this.active = !!value
         })
+    }
+
+    get point() {
+        return this._point
     }
 
     get x() {
@@ -36,6 +43,22 @@ export class LitPoint extends HTMLElement {
 
     set y(value:number) {
         this.style.setProperty('--y', String(value))
+    }
+
+    get dx() {
+        return Number.parseInt(getComputedStyle(this).getPropertyValue('--dx'));
+    }
+
+    get dy() {
+        return Number.parseInt(getComputedStyle(this).getPropertyValue('--dy'));
+    }
+
+    set dx(value:number) {
+        this.style.setProperty('--dx', String(value))
+    }
+
+    set dy(value:number) {
+        this.style.setProperty('--dy', String(value))
     }
 
     set active(value: boolean) {

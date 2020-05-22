@@ -1,6 +1,8 @@
 :host {
 	--x: 0;
 	--y: 0;
+	--dx: 0;
+	--dy: 0;
 	--line-size: 2px;
 	--line-color: #000;
 	--size: 40px;
@@ -25,8 +27,8 @@
 		rgba(0,0,0,0) calc(50% + var(--line-size))
 	);
 	position: absolute;
-	left: calc(var(--x) * 1px - var(--size) / 2);
-	top: calc(var(--y) * 1px - var(--size) / 2);
+	left: calc(var(--x) * 1px - var(--size) / 2 - var(--dx) * 1px);
+	top: calc(var(--y) * 1px - var(--size) / 2 - var(--dy) * 1px);
 	cursor: grab;
 
 	/*--translate-x: 0;
