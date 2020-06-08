@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <style type="text/css">
+   
+svg {
+  border: 1px solid gray;
+}
+
+  </style>
+</head>
+<body>
+<svg id="mysvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1200" preserveAspectRatio="xMidYMid meet">
+</svg>
+
+<script>
+  const svgNode = document.querySelector("svg")
+  const NS = svgNode.getAttribute("xmlns")
+
+  svgNode.addEventListener("pointerdown", event => {
+    const {clientX, clientY} = event
+    console.log(event)
+
+    // let circle = document.createElementNS(NS, 'circle')
+    // circle.setAttributeNS(null, 'cx', Math.round(clientX))
+    // circle.setAttributeNS(null, 'cy', Math.round(clientY))
+    // circle.setAttributeNS(null, 'r', 10)
+    // circle.setAttributeNS(null, 'style', 'fill: none; stroke: blue; stroke-width: 1px;' )
+    // svgNode.appendChild(circle)
+    
+    const pt = svgNode.createSVGPoint()
+    pt.x = clientX
+    pt.y = clientY
+    const {x, y} = pt.matrixTransform(svgNode.getScreenCTM().inverse())
+
+    circle = document.createElementNS(NS, 'circle')
+    circle.setAttributeNS(null, 'cx', Math.round(x))
+    circle.setAttributeNS(null, 'cy', Math.round(y))
+    circle.setAttributeNS(null, 'r', 10)
+    circle.setAttributeNS(null, 'style', 'fill: none; stroke: red; stroke-width: 1px;' )
+    svgNode.appendChild(circle)
+  })
+
+</script>
+</body>
+</html>

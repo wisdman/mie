@@ -40,10 +40,10 @@ export class LitPolygonEditor extends HTMLElement {
     private _renderPoints = (polygonList:Array<Polygon>) => {
         requestAnimationFrame(() => {
             this._root.querySelectorAll(LitPoint.TAG_NAME).forEach(node => this._root.removeChild(node))
-            //const {x:dx, y:dy} = (this._root.querySelector("svg") as Element).getBoundingClientRect()
+            const {x:dx, y:dy} = (this._root.querySelector("svg") as Element).getBoundingClientRect()
             for(const polygon of polygonList) {
                 for(const point of polygon.points) {
-                    const litPointNode = new LitPoint(point)
+                    const litPointNode = new LitPoint(point, {dx, dy})
                     this._root.appendChild(litPointNode)
                 }
             }

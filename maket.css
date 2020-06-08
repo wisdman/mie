@@ -74,12 +74,29 @@ html, body {
 }
 
 .item-12 {
-	background: url(images/water3.webp) repeat;
-	transform: translateY(-90px);
-	-webkit-clip-path: url(#river); 
-	clip-path: url(#river);
-	position: absolute;
-    top: 445px;
+    /*background: url(images/water3.webp) repeat;*/
+    background: url(images/bg.png) repeat;
+        transform: translateY(-90px) scale(1.5) scaleX(1.03);
+    -webkit-clip-path: url(#river);
+    clip-path: url(#river);
+    position: absolute;
+    top: 1097px;
+    left: 777px;
+    background-size: 200px auto;
+
+    -webkit-animation-name: MOVE-BG;
+    -webkit-animation-duration: 50s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes MOVE-BG {
+    from {
+        background-position: 187% 0%;
+    }
+    to { 
+        background-position: 0% 0%;
+    }
 }
 
 /*.item-13 {

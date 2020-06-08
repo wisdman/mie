@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+</head>
+<body>
+	<svg style="border:1px solid red" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1200" preserveAspectRatio="xMidYMid meet">
+	</svg>
+
+	<script>
+		const svgns = "http://www.w3.org/2000/svg"
+		const svg = document.querySelector("svg")
+		
+		svg.addEventListener("pointerdown", event=>{
+			
+
+			console.log(event)
+			const {clientX, clientY} = event
+			const point = svg.createSVGPoint()
+			console.log(`clientX: ${clientX}, clientY: ${clientY}`)
+			// let circle = document.createElementNS(svgns, 'circle');
+	  //       circle.setAttributeNS(null, 'cx', Math.round(clientX));
+	  //       circle.setAttributeNS(null, 'cy', Math.round(clientY));
+	  //       circle.setAttributeNS(null, 'r', 10);
+	  //       circle.setAttributeNS(null, 'style', 'fill: none; stroke: blue; stroke-width: 1px;' );
+	  //       svg.appendChild(circle);
+
+	        point.x = clientX
+	        point.y = clientY
+	        
+	        const {x, y} = point.matrixTransform(svg.getScreenCTM().inverse())
+			console.log(`X: ${x}, Y: ${y}`)
+			circle = document.createElementNS(svgns, 'circle');
+	        circle.setAttributeNS(null, 'cx', Math.round(x));
+	        circle.setAttributeNS(null, 'cy', Math.round(y));
+	        circle.setAttributeNS(null, 'r', 10);
+	        circle.setAttributeNS(null, 'style', 'fill: none; stroke: red; stroke-width: 1px;' );
+	        svg.appendChild(circle);
+
+		})
+	</script>
+</body>
+</html>

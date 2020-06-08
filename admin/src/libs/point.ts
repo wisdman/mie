@@ -35,16 +35,8 @@ export class Point extends EventEmitter {
 		const p = this._svg.createSVGPoint()
 		p.x = this.x
 		p.y = this.y
-		//console.log(`x=${p.x}, y=${p.y}`)
-		p.matrixTransform(ctm)
-		const viewBox = this._svg.getAttribute("viewBox")
-		if(!viewBox) return [p.x, p.y]
-		const [sX, sY, fX, fY] = viewBox.split(" ").map(v=>parseInt(v))
-
-		const {width, height, x, y} = this._svg.getBBox()
-		const [dx,dy] = [width / (fX - sX), height / (fY - sY)]
-		console.log(`dx=${dx}, dy=${dy}`)
-		return [p.x * dx - x, p.y * dy - y]
+		const {x,y} = p.matrixTransform(ctm)
+		return [x, y]
 	}
 
 	set screenCoords([x,y]:[number,number]) {
@@ -62,19 +54,9 @@ export class Point extends EventEmitter {
 		const p = this._svg.createSVGPoint()
 		p.x = x
 		p.y = y
-		p.matrixTransform(ctm.inverse())
-		const viewBox = this._svg.getAttribute("viewBox")
-		if(!viewBox) {
-			this.x = p.x
-			this.y = p.y
-			return
-		}
-		const [sX, sY, fX, fY] = viewBox.split(" ").map(v=>parseInt(v))
-		const {width, height} = this._svg.getBBox()
-		const [dx,dy] = [width / (fX - sX), height / (fY - sY)]
-		console.log(`dx=${dx}, dy=${dy}`)
-		this.x = p.x / dx
-		this.y = p.y / dy
+		const {x:newX,y:newY} = p.matrixTransform(ctm.inverse())
+		this.x = newX
+		this.y = newY
 		return
 	}
 

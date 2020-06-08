@@ -2,7 +2,7 @@ import {html, render} from './node_modules/lit-html/lit-html.js';
 import {unsafeHTML} from './node_modules/lit-html/directives/unsafe-html.js';
 import Glide, { Autoplay } from './node_modules/@glidejs/glide/dist/glide.modular.esm.js'
 
-document.querySelector("html").style.zoom = Math.min(window.innerWidth / 1920, window.innerHeight / 1080);
+//document.querySelector("html").style.zoom = Math.min(window.innerWidth / 1920, window.innerHeight / 1080);
 
 // Define a template
 const detailTemplate = (content) => html`
@@ -23,11 +23,11 @@ const detailTemplates = [
 // 1
 (content) => html`
 		<div class="container detail-container golden-grid">
-			<h1 style="grid-area: 4 / 4 / span 2 / span 16;">${content.title}</h1>
-			<h3 style="grid-area: 7 / 4 / span 1 / span 10; align-self: end;" class="subtitle">${content.subtitle}</h3>
-			<div class="detail-video-container" style="grid-area: 5 / 1 / span 20 / span 20;">
+			<h2 style="grid-area: 4 / 4 / span 2 / span 16;">${content.title}</h2>
+			<h3 style="grid-area: 5 / 4 / span 1 / span 10; align-self: end;" class="subtitle">${content.subtitle}</h3>
+			<div class="detail-video-container" style="grid-area: 6 / 1 / span 20 / span 20;">
 				
-				<video src="${content.image}" type="video/mp4" autoplay muted loop style="margin-left: -350px;"></video>
+				<video src="${content.image}" type="video/mp4" autoplay muted loop style="margin-left: -300px;"></video>
 			</div>
 			<div class="row detail-text" style="grid-area: 7 / 13 / span 10 / span 5;">
 				${unsafeHTML(content.text)}
@@ -37,9 +37,9 @@ const detailTemplates = [
 // 2
 (content) => html`
 		<div class="container detail-container golden-grid">
-			<h1 style="grid-area: 4 / 4 / span 2 / span 10;">${content.title}</h1>
-			<h3 style="grid-area: 6 / 4 / span 1 / span 10; align-self: end;" class="subtitle">${content.subtitle}</h3>
-			<div class="detail-video-container" style="grid-area: 5 / 1 / span 20 / span 20;">
+			<h2 style="grid-area: 4 / 4 / span 2 / span 10;">${content.title}</h2>
+			<h3 style="grid-area: 7 / 4 / span 1 / span 10; align-self: end;" class="subtitle">${content.subtitle}</h3>
+			<div class="detail-video-container" style="grid-area: 7 / 1 / span 20 / span 20;">
 				
 				<video src="${content.image}" type="video/mp4" autoplay muted loop style="margin-left: -300px;"></video>
 			</div>
@@ -51,13 +51,13 @@ const detailTemplates = [
 // 3
 (content) => html`
 		<div class="container detail-container golden-grid">
-			<h1 style="grid-area: 4 / 4 / span 2 / span 10;">${content.title}</h1>
+			<h2 style="grid-area: 4 / 4 / span 2 / span 10;">${content.title}</h2>
 			<h3 style="grid-area: 7 / 4 / span 1 / span 10; align-self: end;" class="subtitle">${content.subtitle}</h3>
-			<div class="detail-video-container" style="grid-area: 6 / 1 / span 20 / span 15;">
+			<div class="detail-video-container" style="grid-area: 8 / 1 / span 20 / span 15;">
 				
 				<video src="${content.image}" type="video/mp4" autoplay muted loop style="margin-left: -200px;"></video>
 			</div>
-			<div class="row detail-text text_large" style="grid-area: 7 / 13 / span 10 / span 5;">
+			<div class="row detail-text" style="grid-area: 8 / 13 / span 10 / span 5;">
 				${unsafeHTML(content.text)}
 			</div>
 		</div>
@@ -65,14 +65,14 @@ const detailTemplates = [
 // 4
 (content) => html`
 		<div class="container detail-container golden-grid">
-			<h1 style="grid-area: 4 / 4 / span 2 / span 8;">${content.title}</h1>
-			<h3 style="grid-area: 8 / 4 / span 1 / span 8; align-self: end;" class="subtitle">${content.subtitle}</h3>
-			<div class="detail-video-container" style="grid-area: 8 / 1 / span 10 / span 13;">
+			<h2 style="grid-area: 4 / 4 / span 2 / span 8;">${content.title}</h2>
+			<h3 style="grid-area: 7 / 4 / span 1 / span 8; align-self: end;" class="subtitle">${content.subtitle}</h3>
+			<div class="detail-video-container" style="grid-area: 9 / 1 / span 10 / span 13;">
 				
-				<video src="${content.image}" type="video/mp4" autoplay muted loop style="margin-left: -50px;"></video>
+				<video src="${content.image}" type="video/mp4" autoplay muted loop style="margin-left: -70px;"></video>
 			</div>
 			<div class="lead text_large" style="grid-area: 16 / 4 / span 2 / span 8;">${unsafeHTML(content.lead)}</div>
-			<div class="row detail-text" style="grid-area: 4 / 13 / span 10 / span 5;">
+			<div class="row detail-text" style="grid-area: 4 / 12 / span 10 / span 6;">
 				${unsafeHTML(content.text)}
 			</div>
 		</div>
@@ -80,13 +80,13 @@ const detailTemplates = [
 // 5
 (content) => html`
 		<div class="container detail-container golden-grid">
-			<h1 style="grid-area: 4 / 4 / span 2 / span 10;">${content.title}</h1>
+			<h2 style="grid-area: 4 / 4 / span 2 / span 10;">${content.title}</h2>
 			<h3 style="grid-area: 6 / 4 / span 1 / span 10; align-self: end;" class="subtitle">${content.subtitle}</h3>
-			<div class="detail-video-container" style="grid-area: 5 / 1 / span 20 / span 20;">
+			<div class="detail-video-container" style="grid-area: 7 / 1 / span 20 / span 20;">
 				
-				<video src="${content.image}" type="video/mp4" autoplay muted loop style="margin-left: -400px;"></video>
+				<video src="${content.image}" type="video/mp4" autoplay muted loop style="margin-left: -300px;"></video>
 			</div>
-			<div class="row detail-text text_large" style="grid-area: 7 / 13 / span 10 / span 5;">
+			<div class="row detail-text" style="grid-area: 8 / 13 / span 10 / span 5;">
 				${unsafeHTML(content.text)}
 			</div>
 		</div>
@@ -95,13 +95,13 @@ const detailTemplates = [
 (content) => html`
 		<div class="container detail-container golden-grid">
 			<h2 style="grid-area: 4 / 4 / span 2 / span 8;">${content.title}</h2>
-			<h3 style="grid-area: 6 / 4 / span 1 / span 10; align-self: end;" class="subtitle">${content.subtitle}</h3>
-			<div class="detail-video-container" style="grid-area: 5 / 1 / span 20 / span 15;">
+			<h3 style="grid-area: 7 / 4 / span 1 / span 10; align-self: end;" class="subtitle">${content.subtitle}</h3>
+			<div class="detail-video-container" style="grid-area: 7 / 1 / span 20 / span 15;">
 				
 				<video src="${content.image}" type="video/mp4" autoplay muted loop style="margin-left: -200px;"></video>
 			</div>
 			<div class="lead text_large" style="grid-area: 16 / 4 / span 2 / span 8;">${unsafeHTML(content.lead)}</div>
-			<div class="row detail-text" style="grid-area: 4 / 13 / span 10 / span 5;">
+			<div class="row detail-text" style="grid-area: 4 / 12 / span 10 / span 6;">
 				${unsafeHTML(content.text)}
 			</div>
 		</div>
@@ -110,13 +110,13 @@ const detailTemplates = [
 (content) => html`
 		<div class="container detail-container golden-grid">
 			<h2 style="grid-area: 4 / 4 / span 2 / span 8;">${content.title}</h2>
-			<h3 style="grid-area: 6 / 4 / span 1 / span 10; align-self: end;" class="subtitle">${content.subtitle}</h3>
-			<div class="detail-video-container" style="grid-area: 6 / 1 / span 20 / span 15;">
+			<h3 style="grid-area: 7 / 4 / span 1 / span 10; align-self: end;" class="subtitle">${content.subtitle}</h3>
+			<div class="detail-video-container" style="grid-area: 8 / 1 / span 20 / span 15;">
 				
 				<video src="${content.image}" type="video/mp4" autoplay muted loop style="margin-left: -200px;"></video>
 			</div>
 			<div class="lead text_large" style="grid-area: 16 / 4 / span 2 / span 8;">${unsafeHTML(content.lead)}</div>
-			<div class="row detail-text" style="grid-area: 4 / 13 / span 10 / span 5;">
+			<div class="row detail-text" style="grid-area: 4 / 12 / span 10 / span 6;">
 				${unsafeHTML(content.text)}
 			</div>
 		</div>
@@ -125,8 +125,8 @@ const detailTemplates = [
 (content) => html`
 		<div class="container detail-container golden-grid">
 			<h2 style="grid-area: 4 / 4 / span 2 / span 8;">${unsafeHTML(content.title)}</h2>
-			<h3 style="grid-area: 6 / 4 / span 1 / span 10; align-self: end;" class="subtitle">${content.subtitle}</h3>
-			<div class="detail-video-container" style="grid-area: 6 / 1 / span 20 / span 15;">
+			<h3 style="grid-area: 7 / 4 / span 1 / span 10; align-self: end;" class="subtitle">${content.subtitle}</h3>
+			<div class="detail-video-container" style="grid-area: 8 / 1 / span 20 / span 15;">
 				
 				<video src="${content.image}" type="video/mp4" autoplay muted loop style="margin-left: -200px;"></video>
 			</div>
@@ -139,11 +139,11 @@ const detailTemplates = [
 // 9
 (content) => html`
 		<div class="container detail-container golden-grid">
-			<h1 style="grid-area: 4 / 4 / span 2 / span 10;">${content.title}</h1>
-			<h3 style="grid-area: 6 / 4 / span 1 / span 10; align-self: end;" class="subtitle">${content.subtitle}</h3>
-			<div class="detail-video-container" style="grid-area: 6 / 1 / span 20 / span 16;">
+			<h2 style="grid-area: 4 / 4 / span 2 / span 6;">${content.title}</h2>
+			<h3 style="grid-area: 5 / 4 / span 1 / span 10; align-self: end;" class="subtitle">${content.subtitle}</h3>
+			<div class="detail-video-container" style="grid-area: 7 / 1 / span 20 / span 16;">
 				
-				<video src="${content.image}" type="video/mp4" autoplay muted loop style="margin-left: -250px;"></video>
+				<video src="${content.image}" type="video/mp4" autoplay muted loop style="margin-left: -200px;"></video>
 			</div>
 			<div class="lead text_large" style="grid-area: 16 / 4 / span 2 / span 8;">${unsafeHTML(content.lead)}</div>
 			<div class="row detail-text" style="grid-area: 4 / 13 / span 10 / span 5;">
@@ -156,9 +156,9 @@ const detailTemplates = [
 		<div class="container detail-container golden-grid">
 			<h2 style="grid-area: 4 / 4 / span 2 / span 15;">${content.title}</h2>
 			<h3 style="grid-area: 6 / 4 / span 1 / span 8; align-self: end;" class="subtitle">${unsafeHTML(content.subtitle)}</h3>
-			<div class="detail-video-container" style="grid-area: 6 / 1 / span 20 / span 17;">
+			<div class="detail-video-container" style="grid-area: 8 / 1 / span 20 / span 17;">
 				
-				<video src="${content.image}" type="video/mp4" autoplay muted loop style="margin-left: -300px;"></video>
+				<video src="${content.image}" type="video/mp4" autoplay muted loop style="margin-left: -250px;"></video>
 			</div>
 			<div class="row detail-text" style="grid-area: 6 / 13 / span 10 / span 5;">
 				${unsafeHTML(content.text)}
@@ -168,7 +168,7 @@ const detailTemplates = [
 // 11
 (content) => html`
 		<div class="container detail-container golden-grid">
-			<h1 style="grid-area: 4 / 4 / span 2 / span 10;">${content.title}</h1>
+			<h2 style="grid-area: 4 / 4 / span 2 / span 10;">${content.title}</h2>
 			<h3 style="grid-area: 6 / 4 / span 1 / span 10; align-self: end;" class="subtitle">${content.subtitle}</h3>
 			<div class="detail-video-container" style="grid-area: 6 / 1 / span 20 / span 20;">
 				
@@ -182,7 +182,7 @@ const detailTemplates = [
 ]	
 	const detailTemplate2 = (content) => html`
 		<div class="container detail-container golden-grid">
-			<h1 style="grid-area: 4 / 4 / span 2 / span 10;">${content.title}</h1>
+			<h2 style="grid-area: 4 / 4 / span 2 / span 10;">${content.title}</h2>
 			<h3 style="grid-area: 6 / 4 / span 1 / span 10; align-self: end;" class="subtitle">${content.subtitle}</h3>
 			<div class="detail-video-container" style="grid-area: 6 / 1 / span 20 / span 20;">
 				
