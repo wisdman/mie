@@ -76,18 +76,21 @@ html, body {
 .item-12 {
     /*background: url(images/water3.webp) repeat;*/
     background: url(images/bg.png) repeat;
-        transform: translateY(-90px) scale(1.5) scaleX(1.03);
+    /*transform: translateY(-90px) scale(1.5) scaleX(1.03);*/
     -webkit-clip-path: url(#river);
     clip-path: url(#river);
     position: absolute;
-    top: 1097px;
-    left: 777px;
+/*    top: 1097px;
+    left: 777px;*/
     background-size: 200px auto;
 
     -webkit-animation-name: MOVE-BG;
     -webkit-animation-duration: 50s;
     -webkit-animation-timing-function: linear;
     -webkit-animation-iteration-count: infinite;
+
+    width: 100vw;
+    height: 100vh;
 }
 
 @-webkit-keyframes MOVE-BG {
@@ -129,4 +132,216 @@ fill: url(#water);
 	position: absolute;
 	top: 256px;
 	left: 0;
+}
+
+/*.fadeInOut {
+	opacity: 0;
+	animation: fadeInOut 2.5s;
+}*/
+
+@keyframes fadeInOut {
+	0% {
+		opacity: 0;
+	}
+	30% {
+		opacity: 1;
+	}
+	70% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+#icon1 {
+    top: 134px;
+    left: 380px;
+}
+
+#icon2 {
+    top: 515px;
+    left: 1130px;
+}
+
+#icon3 {
+	top: 259px;
+    left: 2289px;
+}
+
+#icon4 {
+	top: 608px;
+    left: 2141px;
+
+}
+
+#icon5 {
+	top: 995px;
+    left: 1909px;
+}
+
+#icon6 {
+	top: 995px;
+    left: 2489px;
+}
+
+#icon7 {
+    top: 1278px;
+    left: 1620px;
+}
+
+#icon8 {
+top: 1278px;
+    left: 2577px;
+}
+
+#icon9 {
+top: 1362px;
+    left: 712px;
+}
+
+#icon10 {
+top: 1513px;
+    left: 1831px;
+}
+
+#icon11 {
+    top: 1513px;
+    left: 2279px;
+}
+
+
+
+.spinning-icon-container {
+	z-index: 5;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  -o-perspective: 1000;
+  perspective: 1000;
+}
+
+.spinning-icon,
+.spinning-icon-back
+{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(63,94,251);
+  /*background: radial-gradient(circle, rgba(63,94,251,1) 0%,       rgba(252,70,107,1) 100%);*/
+  box-shadow: 
+    inset 25px 25px 27px 0 rgba(0, 0, 0, 0.25),
+    inset -16px -16px 20px 0 rgba(255, 255, 255, 0.3);
+  
+  color: #fff;
+  font-size: 56px;
+  font-weight: bold;
+  font-family: 'Noto Serif', serif;
+  
+  -webkit-animation: jump 4s infinite;
+  -webkit-transform-style: preserve-3d;
+  
+  backface-visibility: hidden;
+}
+
+.spinning-icon-back {
+  -webkit-animation: jump-back 4s infinite;
+}
+
+.spinning-icon-shadow {
+  display: block;
+  position: absolute;
+  width: 10%;
+  height: 100%;
+  z-index: 0;
+  bottom: -70%;
+  left: 50%;
+  margin-left: -5px;
+  background: rgba(20, 20, 20, .1);
+  box-shadow: 0px 0 20px 25px rgba(20,20,20,.1);
+  border-radius: 50%;
+  transform: perspective(600px) rotateX(85deg);
+  
+  -webkit-animation: shrink 4s infinite;
+}
+
+.spinning-icon::before,
+.spinning-icon-back::before{
+  display: block;
+  content: "";
+    width: 60%; 
+    height: 30%; 
+    position: absolute;
+    left: 20%;
+    top: 10%;  
+    background: -webkit-linear-gradient(top, rgba(232,232,232,1) 0%, rgba(232,232,232,1) 1%, rgba(255,255,255,0) 100%);
+    border-radius: 40px / 20px;
+  z-index: 1;
+}
+
+
+@-webkit-keyframes shrink {
+    0% {
+        transform: perspective(600px) rotateX(85deg) scale(0.8);
+    }
+    50% {
+        transform: perspective(600px) rotateX(85deg) scale(0.6);
+    }
+    100% {
+        transform: perspective(600px) rotateX(85deg) scale(0.8);
+    }
+}
+
+@-webkit-keyframes jump {
+    0% {
+        top: 0;
+    }
+
+    50% {
+        top: -10px;
+       -webkit-transform: rotateY(-180deg);
+
+    }
+
+    100% {
+        top: 0;
+    }
+}
+
+@-webkit-keyframes jump-back {
+    0% {
+        top: 0;
+      -webkit-transform: rotateY(-180deg);
+    }
+
+    50% {
+        top: -10px;
+       -webkit-transform: rotateY(0);
+
+    }
+
+    100% {
+        top: 0;
+      -webkit-transform: rotateY(-180deg);
+    }
+}
+
+
+.more-button {
+    top: 1797px;
+    left: 2177px;
+	width: 581px;
+	height: 69px;
+	position: absolute;
+	z-index: 5;
+	cursor: pointer;
 }

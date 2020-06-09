@@ -4,80 +4,135 @@
 	<meta charset="UTF-8">
 	<title>МИЕ Схема</title>
 	<link rel="stylesheet" href="maket.css">
+	    <script>
+      function openInNewTab(url) {
+        var win = window.open(url, 'MIE_Content');
+        win.focus();
+      }
+    </script>
 </head>
 <body>
+
 <div style="width: 100vw; height: 100vh; position: fixed; border: 10px solid red; box-sizing: border-box;"></div>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1200" preserveAspectRatio="none">
 
-	  <polygon fill="#fff" points="406 126,408 170,409 239,426 239,424 281,411 285,410 369,297 372,297 314,347 312,346 277,374 278,373 241,354 245,347 204,268 207,271 373,167 372,164 172,163 123"></polygon>
+	  <polygon fill="#fff" class="fadeInOut" points="406 126,408 170,409 239,426 239,424 281,411 285,410 369,297 372,297 314,347 312,346 277,374 278,373 241,354 245,347 204,268 207,271 373,167 372,164 172,163 123">
+	  </polygon>
 
-	  <polygon fill="#fff" points="763 377,832 376,836 480,764 480"></polygon>
+	  <polygon fill="#fff" class="fadeInOut" style="animation-delay: 2s" points="763 377,832 376,836 480,764 480">
+	  </polygon>
 
-	  <polygon fill="#fff" points="1225 209,1864 206,1866 264,1846 355,1779 355,1783 322,1673 326,1661 358,1570 356,1567 321,1447 323,1445 354,1359 354,1361 324,1216 322"></polygon>
+	  <polygon fill="#fff" class="fadeInOut" style="animation-delay: 4s" points="1225 209,1864 206,1866 264,1846 355,1779 355,1783 322,1673 326,1661 358,1570 356,1567 321,1447 323,1445 354,1359 354,1361 324,1216 322">
+	  </polygon>
 
-	  <polygon fill="#fff" points="1362 378,1461 378,1456 418,1625 413,1633 458,1620 516,1299 513,1284 418,1364 422"></polygon>
+	  <polygon fill="#fff" class="fadeInOut" style="animation-delay: 6s" points="1362 378,1461 378,1456 418,1625 413,1633 458,1620 516,1299 513,1284 418,1364 422">
+	  </polygon>
 
-	  <polygon fill="#fff" points="1447 684,1461 805,1176 801,1172 680"></polygon>
+	  <polygon fill="#fff" class="fadeInOut" style="animation-delay: 8s" points="1447 684,1461 805,1176 801,1172 680">
+	  </polygon>
 
-	  <polygon fill="#fff" points="1859 681,1851 786,1548 786,1533 673"></polygon>
-
-	  <polygon fill="#fff" points="1362 378,1461 378,1456 418,1625 413,1633 458,1620 516,1299 513,1284 418,1364 422"></polygon>
+	  <polygon fill="#fff" class="fadeInOut" style="animation-delay: 10s" points="1859 681,1851 786,1548 786,1533 673">
+	  </polygon>
 	
-	  <polygon fill="#fff" points="1627 890,1608 979,923 954,914 1057,841 1057,857 954,584 944,605 844,750 853,750 816,810 823,823 853,952 862,948 832,1014 836,1020 866,1137 871,1152 846,1218 848,1225 876,1469 882,1460 867,1547 869,1569 888"></polygon>
+	  <polygon fill="#fff" class="fadeInOut" style="animation-delay: 12s" points="1627 890,1608 979,923 954,914 1057,841 1057,857 954,584 944,605 844,750 853,750 816,810 823,823 853,952 862,948 832,1014 836,1020 866,1137 871,1152 846,1218 848,1225 876,1469 882,1460 867,1547 869,1569 888">
+	  </polygon>
 
-	  <polygon fill="#fff" points="1855 892,1861 1105,1761 1108,1762 969,1728 969,1728 1002,1694 1000,1695 971,1632 970,1649 881"></polygon>
+	  <polygon fill="#fff" class="fadeInOut" style="animation-delay: 14s" points="1855 892,1861 1105,1761 1108,1762 969,1728 969,1728 1002,1694 1000,1695 971,1632 970,1649 881">
+	  </polygon>
 
-	  <polygon fill="#fff" points="408 959,607 968,605 1025,413 1024"></polygon>
+	  <polygon fill="#fff" class="fadeInOut" style="animation-delay: 16s" points="408 959,607 968,605 1025,413 1024">
+	  </polygon>
 
-	  <polygon fill="#fff" points="1085 1067,1491 1061,1493 1092,1512 1091,1510 1122,1098 1127"></polygon>
+	  <polygon fill="#fff" class="fadeInOut" style="animation-delay: 18s" points="1085 1067,1491 1061,1493 1092,1512 1091,1510 1122,1098 1127">
+	  </polygon>
 
-	  <polygon fill="#fff" points="1531 1099,1550 1066,1586 1066,1601 1098,1588 1127,1548 1128"></polygon>
+	  <polygon fill="#fff" class="fadeInOut" style="animation-delay: 20s" points="1531 1099,1550 1066,1586 1066,1601 1098,1588 1127,1548 1128">
+	  </polygon>
 	  
 	</svg>
 
-<!--  	<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" style="width: 1920px;
-    height: 1200px;">
+	<div class="spinning-icon-container" id="icon1">
+	  <div class="spinning-icon">i</div>
+	  <div class="spinning-icon-back">i</div>
+	  <div class="spinning-icon-shadow"></div>
+	</div>
 
-	  <polygon fill="#fff" points="21.16 10.47, 21.23 14.19, 21.3 19.95, 22.17 19.95, 22.06 23.45, 21.41 23.78, 21.33 30.79, 15.47 30.96, 15.47 26.15, 18.09 26.03, 18.02 23.11, 19.47 23.19, 19.44 20.06, 18.44 20.41, 18.09 16.98, 13.94 17.23, 14.14 31.07, 8.69 31.04, 8.55 14.36, 8.5 10.27"></polygon>
 
-	  <polygon fill="#fff" points="39.74 31.43, 43.33 31.32, 43.54 39.96, 39.79 39.99"></polygon>
+	<div class="spinning-icon-container" id="icon2">
+	  <div class="spinning-icon">i</div>
+	  <div class="spinning-icon-back">i</div>
+	  <div class="spinning-icon-shadow"></div>
+	</div>
 
-	  <polygon fill="#fff" points="63.80 17.42, 97.08 17.14, 97.21 22.01, 96.15 29.61, 92.67 29.62, 92.84 26.81, 87.13 27.16, 86.53 29.8, 81.77 29.65, 81.63 26.79, 75.37 26.9, 75.27 29.5, 70.8 29.47, 70.9 27, 63.33 26.81"></polygon>
+	<div class="spinning-icon-container" id="icon3">
+	  <div class="spinning-icon">i</div>
+	  <div class="spinning-icon-back">i</div>
+	  <div class="spinning-icon-shadow"></div>
+	</div>
 
-	  <polygon fill="#fff" points="70.94 31.52, 76.09 31.48, 75.83 34.87, 84.63 34.4, 85.07 38.19, 84.37 42.99, 67.66 42.78, 66.89 34.84, 71.05 35.13"></polygon>
+		<div class="spinning-icon-container" id="icon4">
+	  <div class="spinning-icon">i</div>
+	  <div class="spinning-icon-back">i</div>
+	  <div class="spinning-icon-shadow"></div>
+	</div>
 
-	  <polygon fill="#fff" points="75.36 57.04, 76.09 67.10, 61.25 66.73, 61.04 56.67"></polygon>
+		<div class="spinning-icon-container" id="icon5">
+	  <div class="spinning-icon">i</div>
+	  <div class="spinning-icon-back">i</div>
+	  <div class="spinning-icon-shadow"></div>
+	</div>
 
-	  <polygon fill="#fff" points="96.82 56.79, 96.41 65.51, 80.63 65.48, 79.84 56.09"></polygon>
+		<div class="spinning-icon-container" id="icon6">
+	  <div class="spinning-icon">i</div>
+	  <div class="spinning-icon-back">i</div>
+	  <div class="spinning-icon-shadow"></div>
+	</div>
 
-	  <polygon fill="#fff" points="70.94 31.52, 76.09 31.48, 75.83 34.87, 84.63 34.4, 85.07 38.19, 84.37 42.99, 67.66 42.78, 66.89 34.84, 71.05 35.13"></polygon>
-	
-	  <polygon fill="#fff" points="84.74 74.14, 83.75 81.61, 48.08 79.47, 47.61 88.11, 43.81 88.1, 44.64 79.54, 30.42 78.66, 31.51 70.35, 39.05 71.12, 39.05 68.03, 42.17 68.6, 42.84 71.05, 49.57 71.8, 49.4 69.32, 52.8 69.66, 53.11 72.19, 59.22 72.55, 60 70.47, 63.42 70.64, 63.78 73.03, 76.52 73.46, 76.04 72.21, 80.57 72.43, 81.7 74.02"></polygon>
+		<div class="spinning-icon-container" id="icon7">
+	  <div class="spinning-icon">i</div>
+	  <div class="spinning-icon-back">i</div>
+	  <div class="spinning-icon-shadow"></div>
+	</div>
 
-	  <polygon fill="#fff" points="96.61 74.3, 96.93 92.12, 91.70 92.33, 91.77 80.73, 89.98 80.71, 90 83.51, 88.22 83.36, 88.29 80.89, 85 80.83, 85.89 73.44"></polygon>
+			<div class="spinning-icon-container" id="icon8">
+	  <div class="spinning-icon">i</div>
+	  <div class="spinning-icon-back">i</div>
+	  <div class="spinning-icon-shadow"></div>
+	</div>
 
-	  <polygon fill="#fff" points="21.25 79.89, 31.61 80.69, 31.51 85.41, 21.52 85.36"></polygon>
+			<div class="spinning-icon-container" id="icon9">
+	  <div class="spinning-icon">i</div>
+	  <div class="spinning-icon-back">i</div>
+	  <div class="spinning-icon-shadow"></div>
+	</div>
 
-	  <polygon fill="#fff" points="56.51 88.9, 77.66 88.44, 77.74 90.97, 78.76 90.95, 78.65 93.50, 57.19 93.95"></polygon>
+			<div class="spinning-icon-container" id="icon10">
+	  <div class="spinning-icon">i</div>
+	  <div class="spinning-icon-back">i</div>
+	  <div class="spinning-icon-shadow"></div>
+	</div>
 
-	  <polygon fill="#fff" points="79.74 91.57, 80.72 88.85, 82.6 88.82, 83.39 91.54, 82.71 93.92, 80.63 94.04"></polygon>
-	  
-	</svg> -->
+			<div class="spinning-icon-container" id="icon11">
+	  <div class="spinning-icon">i</div>
+	  <div class="spinning-icon-back">i</div>
+	  <div class="spinning-icon-shadow"></div>
+	</div>
 
 <a href="" class="item item-12" id="item-12"></a>
-
-<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" height="0" width="0">
+  <svg>
+	<!--path fill="#575656" d="M0 0h1920v1200H0z"/-->
+	<!-- <path fill="#575656" d="M0 0h2880v1800H0z"/> -->
 	<defs>
-<!--     <pattern id="water" patternUnits="objectBoundingBox" width="0.084" height="1">
-    <image xlink:href="images/water2.gif" x="0" y="0" width="80" height="60" preserveAspectRatio="none" />
-  </pattern>
-  <image xlink:href="images/tap.gif" x="0" y="0" width="50" height="50" preserveAspectRatio="none" /> -->
-<clipPath id="river">
-<path class="cls-11" d="M1094 316V184c-27 1-88 18-103 26s-545 17-545 17l-47 70s568-10 581-9 56 22 114 28M1251 0h58l61 1 5 2h-3v14h8v9h-5v6l-1 1h-65v18h-61c-2 0-3 0-3-5V5c0-3 3-5 6-5M371 298C271 310 86 348 0 414V234l420-3zM1135 218h283v60h-283zm298 4h358v56h-358zM1421 502s1-23 4-24l96-12c3 0 2 29 2 29l6 1v-6h94v-24h67s6 0 6 3v29l78 1v14l-103-1v-22h-24v21l-128-3v-18h-15v16l-52-2v-3h3v-13h-10v13h3v2zM1396 8h399v5h-399z"/>
-</clipPath>
-  </defs></svg>
+		<clipPath id="river">
+	<path fill="#009EE3" d="M1688 1031V834c-42 0-137 26-159 39s-842 24-842 24l-72 105s876-15 896-13 87 33 177 42m241-474h89l94 1 8 3h-5v23h12v12h-6v9l-3 1h-100v27h-93c-3 0-6 0-6-7v-62c1-4 6-7 10-7M572 1004c-153 18-440 75-572 174V908l648-3-76 99zm1179-120h436v91h-436zm459 6h552v84h-552zm-18 420s1-35 6-38l147-16c4 1 3 43 3 43l10 2-1-11h145v-34h104s10 0 9 4v44l120 1v20l-158-2v-33h-39v33l-196-4v-29h-23v24l-81-1v-5h5v-21h-15v21h4v3l-40-1zm-39-741h615v7h-615z"/>
+		</clipPath>
+		</defs>
+	</svg>
 
-<!-- <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1791.01 512.75"><defs>
-  </defs><path class="cls-11" d="M1120.69 687.53V555.84c-27.07.58-88.15 17.62-103.17 26S472.59 598 472.59 598l-46.78 70.75s567.74-10.68 580.45-9.24 56.31 21.81 114.43 28M1277.49 371.41c19.25.41 38.51 0 57.77 0l61.2.95c1.51 0 3.22.91 4.93 2.26h-2.65v14.16h7.73v8.53H1402V403l-1.73 1h-65v18.11h-60.19c-2 0-3.63.16-3.63-5.13v-40.3c0-3.44 3.56-5.31 6-5.25M397.59 669.47C297.82 681.82 112.3 719 26.72 785.83V605l420-2.1z" transform="translate(-26.72 -371.41)"/><path class="cls-11" d="M1135.05 217.79h283.15v60.64h-283.15zM1432.63 222.05h358.38v56.38h-358.38z"/><path class="cls-11" d="M1448.1 873.78s.94-23.19 3.53-24.78 93-11.69 96-11.16 1.84 28.87 1.84 28.87l6.39.62-.35-6.32h93.9v-23.19h67.19s6.59-.51 6.35 2.94 0 29 0 29l77.66.89v13.55l-102.73-1.09V861h-24.47v21.53L1546 879.81h-.24V861h-14.59v16.26l-52.56-2v-2.8h2.64v-13.28H1472v13.29h2.64v2.32z" transform="translate(-26.72 -371.41)"/><path class="cls-11" d="M1395.56 7.84h399.1v5.34h-399.1z"/></svg> -->
+
+<a onclick="openInNewTab('detail.html?video=/video/plotina.mp4');" class="more-button">
+<svg viewBox="0 0 581 69"><defs><style>.cls-1{fill:#c5c6c6;fill-rule:evenodd}.cls-2{fill:#575656}</style></defs><path class="cls-1" d="M7 0h566a7 7 0 018 7v55a7 7 0 01-8 7H7a7 7 0 01-7-7V7a7 7 0 017-7"/><path class="cls-2" d="M442 52h-20V17h20v5h-14v9h13v5h-13v11h13zm-47-5h12V17h6v35h-42V17h6v30h12V17h6zm-49 0h5a11 11 0 006-1 5 5 0 002-5 5 5 0 00-2-4l-7-1h-4zm19-6a9 9 0 01-4 8q-3 3-10 3h-10V17h5v14h5q7 0 10 3a9 9 0 014 7zm-33 11h-6V22h-10l-3 21c0 3-1 6-3 7a7 7 0 01-5 2 9 9 0 01-3 0v-5a7 7 0 002 1 3 3 0 003-2l2-9 3-20h20zm-60-18c0 5 1 8 3 10s4 3 8 3 5-1 7-3 3-5 3-10-1-7-3-9-4-3-7-3-6 1-8 3-3 5-3 9zm27 0q0 9-5 13c-2 4-6 5-11 5s-10-1-12-5-4-7-4-13 1-10 4-13 6-4 12-4 9 1 11 4 5 8 5 13zm-55 13h4l6-1a5 5 0 002-5 5 5 0 00-2-4l-7-1h-3zm17-6q0 11-13 11h-10V17h21v5h-15v9h4q13 0 13 10zm-59-26l-7-2c-2-1-2-3-2-6h5a7 7 0 000 2 3 3 0 002 2 8 8 0 003 0 5 5 0 003-1 5 5 0 001-3h6a8 8 0 01-3 6l-8 2zm-14 2h5v24l-1 4h1l17-28h7v35h-5V34 24l-18 28h-6zm-16 20l-3-9a64 64 0 01-2-6 53 53 0 01-2 6l-3 9zm5 15l-3-10h-13l-4 10h-6l13-35h6l13 35zm-30 0h-6V36h-15v16h-6V17h6v14h15V17h6zm-35-27a7 7 0 01-2 6 11 11 0 01-6 3 12 12 0 017 2 7 7 0 012 6 9 9 0 01-4 7c-2 2-6 3-10 3q-7 0-11-2v-5a23 23 0 005 2 26 26 0 005 1q9 0 9-6a4 4 0 00-2-4l-8-2h-5v-4h4q11 0 11-6a4 4 0 00-2-3 8 8 0 00-5-2 17 17 0 00-5 1 18 18 0 00-4 2l-3-3a21 21 0 0112-4l9 2a7 7 0 013 6zm-26-8L75 42a29 29 0 01-4 6 10 10 0 01-3 3 13 13 0 01-6 1 17 17 0 01-5-1v-5a13 13 0 005 1 6 6 0 004-1 9 9 0 002-3L56 17h6l8 18a32 32 0 011 3h1a15 15 0 010-2l8-19z"/><path d="M502 12a23 23 0 11-23 23 23 23 0 0123-23" fill="#575656" fill-rule="evenodd"/><path class="cls-2" d="M524 35a21 21 0 10-7 15 21 21 0 007-15m-22-25a24 24 0 11-24 25 24 24 0 0124-25z"/><path class="cls-1" d="M493 20l12 7 12 8-12 7-12 7V20z"/></svg>
+</a>
+
 </body>
 </html>
