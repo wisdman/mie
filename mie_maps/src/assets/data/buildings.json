@@ -1,0 +1,23 @@
+[
+    {
+        "name": "Здание 1",
+        "image": "/images/building1.jpg",
+        "description": "some description",
+        "coord": [500, 500],
+        "year": 1920
+    },
+    {
+        "name": "Здание 2",
+        "image": "/images/building2.jpg",
+        "description": "some description",
+        "coord": [600, 600],
+        "year": 1950
+    },
+    {
+        "name": "Здание 3",
+        "image": "/images/building3.jpg",
+        "description": "some description",
+        "coord": [400, 500],
+        "year": 1850
+    }
+]
