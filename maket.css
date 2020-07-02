@@ -76,7 +76,7 @@ html, body {
 .item-12 {
     /*background: url(images/water3.webp) repeat;*/
     background: url(images/bg.png) repeat;
-    transform: translateY(246px) translateX(10px);
+    /*transform: translateY(-90px) scale(1.5) scaleX(1.03);*/
     -webkit-clip-path: url(#river);
     clip-path: url(#river);
     position: absolute;
@@ -154,70 +154,63 @@ fill: url(#water);
 	}
 }
 
-/*.spinning-icons {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 2880px;
-  height: 1820px;
-  transform-origin: 0 0;
-  transform: scale(0.44);
-  z-index: 100;
-}*/
 #icon1 {
-    top: 60px;
-    left: 167px;
+    top: 134px;
+    left: 380px;
 }
 
 #icon2 {
-    top: 165px;
-    left: 481px;
+	top: 515px;
+    left: 1146px;
 }
 
 #icon3 {
-	top: 57px;
-    left: 1007px;
+	top: 259px;
+    left: 2289px;
 }
 
 #icon4 {
-	top: 199px;
-  left: 942px;
+	top: 608px;
+    left: 2141px;
+
 }
 
 #icon5 {
-	top: 437px;
-    left: 840px;
+	top: 995px;
+    left: 1909px;
 }
 
 #icon6 {
-	top: 437px;
-    left: 1095px;
+	top: 995px;
+    left: 2489px;
 }
 
 #icon7 {
-    top: 562px;
-    left: 712px;
+    top: 1278px;
+    left: 1620px;
 }
 
 #icon8 {
-top: 562px;
-    left: 1133px;
+top: 1278px;
+    left: 2577px;
 }
 
 #icon9 {
-top: 600px;
-    left: 313px;
+top: 1362px;
+    left: 712px;
 }
 
 #icon10 {
-top: 665px;
-    left: 805px;
+top: 1513px;
+    left: 1831px;
 }
 
 #icon11 {
-    top: 665px;
-    left: 1002px;
+    top: 1513px;
+    left: 2279px;
 }
+
+
 
 .spinning-icon-container {
 	z-index: 5;
@@ -233,8 +226,8 @@ top: 665px;
 .spinning-icon,
 .spinning-icon-back
 {
-  width: 100px;
-  height: 100px;
+  width: 100%;
+  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
