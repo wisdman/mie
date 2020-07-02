@@ -18,7 +18,7 @@ export default {
     content: {type: String, default: 'This is a message'}
   },
   data: () => { return {
-    dialogVisibleInner: false
+    dialogVisibleInner: true
   }},
   computed: {
 

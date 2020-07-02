@@ -6,14 +6,13 @@
     <div class="map map-old" :style="mapTransform"><img :src="require(`@/assets/${yearMap}`)" alt="" :style="opacityStyle"></div>
   </div>
   </pinch-zoom>
-  <modal></modal>
 </div>
 </template>
 
 <script>
 import { Draggable } from 'draggable-vue-directive'
 //import { PinchZoom } from 'pinch-zoom-element/dist/pinch-zoom.mjs'
-import { Modal } from './Modal.vue'
+//import { Modal } from './Modal.vue'
 
 export default {
   name: 'CityMap',
@@ -21,7 +20,6 @@ export default {
     Draggable,
   },
   components: {
-    modal: Modal
   },
   props: {
     year: Number,

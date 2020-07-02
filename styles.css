@@ -176,7 +176,7 @@ height: 100%;
 }
 .glide__slide {
   list-style: none;
-  padding: 10%;
+  padding: 30px;
   position: relative; 
   opacity: 0; 
   transition: opacity 0.5s ease; 
@@ -192,6 +192,9 @@ height: 100%;
   z-index: 1;
   /*mix-blend-mode: darken;*/
   mix-blend-mode: multiply;
+  max-height: 1000px;
+  min-height: 1000px;
+  min-width: auto;
 }
 
 .mie_bg {
@@ -333,4 +336,9 @@ strong,
 .index li a {
   display: inline-block;
   padding: 10px 0;
+}
+
+.carousel-page {
+  background-color: #000;
+  overflow: hidden;
 }

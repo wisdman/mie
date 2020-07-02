@@ -10,6 +10,9 @@
       :max="3"
       :show-tooltip="false">
     </el-slider></div>
+
+
+     <router-view></router-view>
   </div>
 </template>
 
@@ -91,7 +94,8 @@ export default {
             "scale": 1,
             "year": 1850
         }
-    ]
+    ],
+    centerDialogVisible: false
   }},
   methods: {
     onChange: function(val) {
