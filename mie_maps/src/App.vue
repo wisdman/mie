@@ -2,7 +2,7 @@
   <div id="app">
     <city-map :year="year" :epoch="epoch" :yearMaps="mapsArray" @change="onChange"></city-map>
     <pointers :pointers="locations" :transform="transform"></pointers>
-    <div class="epochSlderContainer"><el-slider v-model="epoch" :min="0" :max="10" :step="1" :show-tooltip="false"></el-slider></div>
+    <!-- <div class="epochSlderContainer"><el-slider v-model="epoch" :min="0" :max="10" :step="1" :show-tooltip="false"></el-slider></div> -->
     <div class="yearsSlderContainer"><el-slider
       v-model="year"
       show-stops
@@ -119,4 +119,35 @@ body, html {
     right: 100px;
     left: 100px;
   }
+
+.el-slider__runway {
+  height: 44px !important;
+  background-image: -moz-linear-gradient( 90deg, rgb(143,107,41) 0%, rgb(253,224,141) 100%) !important;
+  background-image: -webkit-linear-gradient( 90deg, rgb(143,107,41) 0%, rgb(253,224,141) 100%) !important;
+}
+
+.el-slider__bar {
+  background-color: transparent !important;
+}
+
+.el-slider__marks-text {
+  color: #321200 !important;
+  font-size: 36px !important;
+  margin-top: 0 !important;
+  z-index: 2010;
+}
+
+.el-slider__button-wrapper {
+  background-color: #97723d !important;
+  width: 110px !important;
+  height: 69px !important;
+  border-radius: 0 !important;
+}
+
+.el-slider__button {
+  opacity: 0;
+}
+.el-slider__stop.el-slider__marks-stop {
+  opacity: 0 !important;
+}
 </style>
