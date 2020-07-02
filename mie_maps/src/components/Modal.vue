@@ -3,7 +3,7 @@
   title="Tips"
   :visible.sync="dialogVisibleInner"
   width="80%">
-  <span>{{ content }}</span>
+  <span>{{ content }} {{id}}</span>
   <span slot="footer" class="dialog-footer">
     <el-button type="primary" @click="dialogVisibleInner = false">Закрыть</el-button>
   </span>
@@ -15,10 +15,11 @@ export default {
   name: 'Modal',
   props: {
     dialogVisible:  {type: Boolean, default: false},
-    content: {type: String, default: 'This is a message'}
+    content: {type: String, default: 'This is a message'},
+    id: {type: String, default: ''}
   },
   data: () => { return {
-    dialogVisibleInner: true
+    dialogVisibleInner: false
   }},
   computed: {
 
@@ -31,6 +32,7 @@ export default {
   },
   watch: {
       dialogVisible: function(val) {
+       
           this.dialogVisibleInner = val
       }
   }

@@ -2,17 +2,29 @@
 <div class="marks">
   <div v-for="(point, index) in newpointers" v-bind:key="index">
     <div class="mark" :style="getStyle(point)">
-      <router-link :to="'/detail/' + index">
+      <button @click="openModal(index)">
         <svg width="60px" height="60px" viewBox="0 0 139 139" xmlns="http://www.w3.org/2000/svg"><circle cx="69.5" cy="54.5" r="35.2" stroke="#000" stroke-miterlimit="10"/><circle cx="69.5" cy="54.5" r="20.8" fill="#fff"/><path d="M70 121l-3-1C29 76 34 55 34 55s11 35 36 35M70 121l2-1c38-44 33-65 33-65S94 90 70 90"/></svg>
-      </router-link>
+      </button>
     </div>
   </div>
+
+  <el-dialog
+  :title="currentBuilding.name"
+  :visible.sync="dialogVisible"
+  width="80%"> 
+  <img :src="currentBuilding.image" />
+  <span>{{ currentBuilding.description }}</span>
+  <span slot="footer" class="dialog-footer">
+    <el-button type="primary" @click="dialogVisible = false">Закрыть</el-button>
+  </span>
+</el-dialog>
 </div>
 </template>
 
 <script>
 import { Draggable } from 'draggable-vue-directive'
 //import { PinchZoom } from 'pinch-zoom-element/dist/pinch-zoom.mjs'
+//import Modal from './Modal.vue'
 
 export default {
   name: 'Pointers',
@@ -35,10 +47,22 @@ export default {
   },
   data: () => { return {
     _transform: [],
-    newpointers: []
+    newpointers: [],
+    dialogVisible: false,
+    i: false
+
   }},
   computed: {
-
+    currentBuilding: function() {
+      if(this.i !== false) {
+        return this.pointers[this.i];
+      }
+      else return {
+        name: "",
+        image: "",
+        description: ""
+      }
+    }
   },
   methods: {
     placePoints: function() {
@@ -55,6 +79,11 @@ export default {
         pointer.scale = this._transform[2]
         this.$set(this.newpointers, index, pointer)
       })
+    },
+
+    openModal: function(index) {
+      this.dialogVisible = true;
+      this.i = index;
     },
 
     getStyle(point) {
