@@ -2,22 +2,19 @@
 <div class="marks">
   <div v-for="(point, index) in newpointers" v-bind:key="index">
     <div class="mark" :style="getStyle(point)">
-      <button @click="openModal(index)">
-        <svg width="60px" height="60px" viewBox="0 0 139 139" xmlns="http://www.w3.org/2000/svg"><circle cx="69.5" cy="54.5" r="35.2" stroke="#000" stroke-miterlimit="10"/><circle cx="69.5" cy="54.5" r="20.8" fill="#fff"/><path d="M70 121l-3-1C29 76 34 55 34 55s11 35 36 35M70 121l2-1c38-44 33-65 33-65S94 90 70 90"/></svg>
-      </button>
+      <i class="el-icon-location mie_map-location" @click="openModal(index)"></i>
     </div>
   </div>
 
   <el-dialog
-  :title="currentBuilding.name"
-  :visible.sync="dialogVisible"
-  width="80%"> 
-  <img :src="currentBuilding.image" />
-  <span>{{ currentBuilding.description }}</span>
-  <span slot="footer" class="dialog-footer">
-    <el-button type="primary" @click="dialogVisible = false">Закрыть</el-button>
-  </span>
-</el-dialog>
+    :title="currentBuilding.name"
+    :visible.sync="dialogVisible"
+    :fullscreen="true">
+    <div class="mie_dialog--container">
+    <div class="mie_dialog--img"><img :src="require(`@/assets/${currentBuilding.image}`)" /></div>
+    <div class="mie_dialog--text"><div v-html="currentBuilding.description"></div></div>
+    </div>
+  </el-dialog>
 </div>
 </template>
 
@@ -59,7 +56,7 @@ export default {
       }
       else return {
         name: "",
-        image: "",
+        image: "static/photos/photo3.jpg",
         description: ""
       }
     }
@@ -112,4 +109,28 @@ export default {
 .mark {
   position: absolute;
 }
+
+.mie_dialog--img {
+  width: 600px;
+  margin-right: 40px;
+}
+.mie_dialog--text {
+  flex-grow: 1;
+}
+.mie_dialog--img img {
+  width: 600px;
+}
+.mie_dialog--container {
+  display: flex;
+}
+.mie_map-location {
+  font-size: 42px;
+  color: #409EFF;
+  cursor: pointer;
+}
+.el-button--primary {
+  background-color: #97723d !important;
+  border-color: #97723d !important;
+}
+
 </style>
