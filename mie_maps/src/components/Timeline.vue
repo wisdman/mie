@@ -110,10 +110,10 @@ export default {
   justify-content: space-around;
   
   height: 50px;
-  background: linear-gradient(0deg, rgba(0,31,130,1) 0%, rgba(9,9,121,1) 30%, rgba(0,151,255,1) 100%);
-  
+  /* background: linear-gradient(0deg, rgba(0,31,130,1) 0%, rgba(9,9,121,1) 30%, rgba(0,151,255,1) 100%); */
+  background-image: -moz-linear-gradient( 90deg, #504d48 0%, #b4ada3 100%) !important;
+  background-image: -webkit-linear-gradient( 90deg, #504d48 0%, #b4ada3 100%) !important;
   margin: 10px 0;
-
 }
 
 .timeline_item {
