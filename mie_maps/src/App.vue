@@ -248,6 +248,8 @@ strong,
   background-color: #b4ada3 !important;
   color: #fff !important;
   padding: 60px 100px;
+
+  height: 100vh !important;
 }
 .el-dialog__body {
   font-size: 26px !important;

@@ -116,6 +116,7 @@ export default {
 }
 .mie_dialog--text {
   flex-grow: 1;
+  overflow: auto;
 }
 .mie_dialog--img img {
   width: 600px;
@@ -132,5 +133,4 @@ export default {
   background-color: #97723d !important;
   border-color: #97723d !important;
 }
-
 </style>
