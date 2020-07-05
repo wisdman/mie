@@ -200,7 +200,7 @@ const carouselTemplate = (slides) => html`
 		<div class="glide">
 		  <div data-glide-el="track" class="glide__track">
 		    <ul class="glide__slides">
-		      ${slides.map((i) => html`<li class="glide__slide"><img src="${i}" /><div class="mie_bg" style="background-image:url('${i}')"></div></li>`)}
+		      ${slides.map((i) => html`<li class="glide__slide"><img src="${i}" /></li>`)}
 		    </ul>
 		  </div>
 		</div>
@@ -260,8 +260,9 @@ if(carousel && typeof carousel !== 'undefined') {
 		render(carouselTemplate(val), document.body);
 		new Glide('.glide', {
 			type: 'carousel',
-			autoplay: 4000,
-			hoverpause: false
+			autoplay: 5000,
+			hoverpause: false,
+			animationDuration: 2000
 		}).mount({ Autoplay });
 	});
 

@@ -136,8 +136,8 @@ body, html {
     padding-right: 80px;
     border-radius: 3px;
 
-      background-image: -moz-linear-gradient( 90deg, #504d48 0%, #b4ada3 100%) !important;
-  background-image: -webkit-linear-gradient( 90deg, #504d48 0%, #b4ada3 100%) !important;
+    background-image: -moz-linear-gradient( 90deg, #504d48 0%, #b4ada3 100%) !important;
+    background-image: -webkit-linear-gradient( 90deg, #504d48 0%, #b4ada3 100%) !important;
   }
 
 .el-slider__runway {
