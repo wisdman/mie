@@ -1,7 +1,7 @@
 <template>
 <div class="wrapper">
   <ul class="timeline">
-    <li v-for="(point, index) in marks" v-bind:key="index" class="timeline_item">{{ point }}</li>
+    <li v-for="(point, index) in marks" v-bind:key="index" class="timeline_item" @click="onYearClick(index)">{{ point }}</li>
     <div @pointerdown="moveStart" ref="cursor" class="timeline_cursor"></div>
   </ul>
 </div>
@@ -69,6 +69,12 @@ export default {
       const cursor = this.$refs.cursor;
       const y = event.clientX - this.dX
       cursor.style.setProperty("--left", `${y}px`)
+    },
+    onYearClick(j) {
+      const cursor = this.$refs.cursor
+      cursor.classList.add("transition")
+      cursor.style.setProperty("--left", `${this.items[j]}px`)
+      this.$emit("input", j)
     }
   },
   created: function() {
