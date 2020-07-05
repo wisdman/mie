@@ -2,7 +2,7 @@
 <div class="maps">
   <pinch-zoom>
   <div class="maps-container">
-    <div class="map map-new"><img src="../assets/Maps/ekaterinburg.jpg" alt=""></div>
+    <!-- <div class="map map-new"><img src="../assets/Maps/ekaterinburg.jpg" alt=""></div> -->
     <div class="map map-old" :style="mapTransform"><img :src="require(`@/assets/${yearMap}`)" alt="" :style="opacityStyle"></div>
   </div>
   </pinch-zoom>
