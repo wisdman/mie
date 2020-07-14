@@ -12,7 +12,7 @@
     :fullscreen="true">
     <div class="mie_dialog--container">
     <div class="mie_dialog--img"><img :src="require(`@/assets/${currentBuilding.image}`)" /></div>
-    <div class="mie_dialog--text"><div v-html="currentBuilding.description"></div></div>
+    <div class="mie_dialog--text"><div class="mie_dialog--txt-wrap" v-html="currentBuilding.description"></div></div>
     </div>
   </el-dialog>
 </div>
@@ -113,10 +113,12 @@ export default {
 .mie_dialog--img {
   width: 600px;
   margin-right: 40px;
+
 }
 .mie_dialog--text {
   flex-grow: 1;
   overflow: auto;
+  height: calc(100vh - 70px - 40px - 60px*2);
 }
 .mie_dialog--img img {
   width: 600px;
@@ -132,5 +134,9 @@ export default {
 .el-button--primary {
   background-color: #97723d !important;
   border-color: #97723d !important;
+}
+.mie_dialog--txt-wrap {
+  height: 100%;
+  overflow: auto;
 }
 </style>

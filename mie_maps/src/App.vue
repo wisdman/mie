@@ -207,6 +207,20 @@ body {
   /*text-shadow: 0px 0px 3px rgba(0,0,0,0.5);*/
 }
 
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: transparent;
+}
+
+body::-webkit-scrollbar {
+    width: 6px;
+    background-color: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #000000;
+}
+
 p {margin-bottom: 1.15rem; margin-top: 0;}
 
 h1, h2, h3, h4, h5 {
@@ -250,16 +264,21 @@ strong,
   padding: 60px 100px;
 
   height: 100vh !important;
+  overflow: hidden;
+
 }
 .el-dialog__body {
   font-size: 26px !important;
   color: #fff !important;
+  height: calc(100vh - 70px - 40px - 60px*2 - 30px);
+  padding: 0 !important;
 }
 .el-dialog__title {
   font-size: 4.236em !important; font-family: 'Lato'; line-height: 1; letter-spacing: 0.02em; font-weight:900; color: #fff !important;
 }
 .el-dialog__header {
   margin-bottom: 40px !important;
+  height: 70px;
 }
 .el-dialog__close {
   font-size: 50px;
