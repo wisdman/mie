@@ -77,6 +77,7 @@ html, body {
     /*background: url(images/water3.webp) repeat;*/
     background: url(images/bg.png) repeat;
     /*transform: translateY(-90px) scale(1.5) scaleX(1.03);*/
+    transform: translateY(-21px);
     -webkit-clip-path: url(#river);
     clip-path: url(#river);
     position: absolute;
