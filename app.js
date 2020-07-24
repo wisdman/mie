@@ -66,7 +66,7 @@ const detailTemplates = [
 (content) => html`
 		<div class="container detail-container golden-grid">
 			<h2 style="grid-area: 4 / 4 / span 2 / span 8;">${content.title}</h2>
-			<h3 style="grid-area: 5 / 4 / span 1 / span 8; align-self: end;" class="subtitle">${content.subtitle}</h3>
+			<h3 style="grid-area: 5 / 4 / span 1 / span 8; align-self: end; margin-top: 80px;" class="subtitle">${content.subtitle}</h3>
 			<div class="detail-video-container" style="grid-area: 9 / 1 / span 10 / span 13;">
 				
 				<video src="${content.image}" type="video/mp4" autoplay muted loop style="margin-left: -70px;"></video>
