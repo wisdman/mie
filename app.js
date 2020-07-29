@@ -193,7 +193,7 @@ const detailTemplates = [
 			</div>
 		</div>
 	`;
-const videoTemplate = (src) => html`<video autoplay="true" muted="muted" loop="true" class="fit-fill" src="${src}"></video>`;
+const videoTemplate = (src) => html`<div class="video-container"><video autoplay="true" muted="muted" loop="true" class="fit-contain" src="${src}"></video></div>`;
 
 const carouselTemplate = (slides) => html`
 	<div class="slider-container">
