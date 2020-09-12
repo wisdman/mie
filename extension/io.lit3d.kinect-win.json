@@ -1,0 +1,9 @@
+{
+  "name": "io.lit3d.kinect",
+  "description": "Lit3D Microsoft Kinect Depth Sensor",
+  "path": "KinectNativeMessaging.exe",
+  "type": "stdio",
+  "allowed_origins": [
+    "chrome-extension://cjebclnhhngjlnddcjcmghdmjmpkpenb/"
+  ]
+}
